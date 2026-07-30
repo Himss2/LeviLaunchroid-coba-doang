@@ -6,14 +6,22 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_library(inbuiltmods SHARED
     src/common/transition.cpp
-    src/zoom/zoom.cpp
     src/fps/fps.cpp
     src/snaplook/snaplook.cpp
     src/gyro/gyro.cpp
+
+    # Modul ZoomRewrite yang telah diintegrasikan
+    src/zoom/zoom_jni.cpp
+    src/zoom/Core/Config.cpp
+    src/zoom/CameraHook/CameraHook.cpp
+    src/zoom/ZoomController/ZoomController.cpp
+    src/zoom/TouchController/TouchController.cpp
+    src/zoom/ZoomButton/ZoomButton.cpp
 )
 
 target_include_directories(inbuiltmods PRIVATE 
     src
+    src/zoom
     ${CMAKE_CURRENT_SOURCE_DIR}/../preloader/src
 )
 

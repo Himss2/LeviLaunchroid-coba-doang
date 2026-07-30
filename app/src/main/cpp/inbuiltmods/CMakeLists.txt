@@ -10,13 +10,11 @@ add_library(inbuiltmods SHARED
     src/snaplook/snaplook.cpp
     src/gyro/gyro.cpp
 
-    # Modul ZoomRewrite yang telah diintegrasikan
+    # Modul Zoom Engine (Hanya file backend & JNI Bridge)
     src/zoom/zoom_jni.cpp
     src/zoom/Core/Config.cpp
     src/zoom/CameraHook/CameraHook.cpp
     src/zoom/ZoomController/ZoomController.cpp
-    src/zoom/TouchController/TouchController.cpp
-    src/zoom/ZoomButton/ZoomButton.cpp
 )
 
 target_include_directories(inbuiltmods PRIVATE 
